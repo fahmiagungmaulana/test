@@ -688,12 +688,24 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
 }
 
-/* Modern Field Grid */
+/* Modern Field Grid: Symmetrical 3x2 Layout */
 .config-grid-modern {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   align-items: stretch;
+}
+
+@media (max-width: 960px) {
+  .config-grid-modern {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .config-grid-modern {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Modern Field Card */
