@@ -1,0 +1,684 @@
+# AI Travel Readiness Copilot
+
+### One-liner
+
+**An AI-powered travel readiness platform that helps travelers understand what they need to prepare, bring, install, learn, and do when traveling to another country.**
+
+Bukan sekadar mencari tempat wisata atau membuat itinerary, tetapi membantu traveler menjawab:
+
+> **“Apa yang perlu aku tahu sebelum pergi ke negara ini agar tidak clueless ketika sampai?”**
+
+---
+
+## 1. Problem
+
+Informasi untuk traveling ke luar negeri sebenarnya tersedia sangat banyak, tetapi tersebar di berbagai tempat:
+
+* TikTok
+* Reddit
+* YouTube
+* Blog
+* Google
+* website pemerintah
+* forum traveler
+* pengalaman orang lain
+
+Masalahnya, traveler harus menggabungkan semuanya sendiri.
+
+Informasi yang sering terlewat justru merupakan hal-hal praktis seperti:
+
+* barang yang perlu dibawa
+* aplikasi lokal yang perlu digunakan
+* metode pembayaran yang tersedia
+* transport card/pass
+* internet/eSIM
+* perbedaan toilet
+* cultural etiquette
+* kebiasaan masyarakat
+* aturan lokal
+* hal yang berbeda dari Indonesia
+* kebutuhan untuk long stay
+* layanan yang tidak tersedia atau memiliki keterbatasan regional
+* hal-hal kecil yang biasanya baru diketahui setelah tiba
+
+Akibatnya, seseorang bisa memiliki itinerary yang bagus tetapi tetap **tidak siap menghadapi kehidupan sehari-hari di negara tujuan.**
+
+---
+
+# 2. Solution
+
+Produk menjadi **AI Travel Readiness Copilot**.
+
+User memasukkan konteks perjalanan:
+
+* negara asal
+* negara tujuan
+* kota
+* tanggal perjalanan
+* durasi
+* tujuan perjalanan
+* solo/family/group
+* budget
+* first-time traveler atau tidak
+* preference/kebutuhan tertentu
+* short stay atau long stay
+
+AI kemudian menghasilkan **personalized travel readiness plan**.
+
+Contoh:
+
+> 🇮🇩 Indonesia → 🇰🇷 South Korea
+> 10 days
+> Solo traveler
+> First time
+> Seoul + Busan
+
+AI menghasilkan:
+
+### 🧳 Prepare
+
+Apa yang perlu dipersiapkan.
+
+### 🎒 Pack
+
+Apa yang perlu dibawa.
+
+### 🛒 Buy
+
+Apa yang mungkin perlu dibeli sebelum berangkat.
+
+### 📱 Install
+
+Aplikasi lokal yang sebaiknya tersedia.
+
+### 💳 Payment
+
+Cara pembayaran yang umum digunakan dan alternatifnya.
+
+### 🚇 Transport
+
+Transport card/pass dan cara penggunaannya.
+
+### 📶 Connectivity
+
+SIM, eSIM, roaming, dan kebutuhan internet.
+
+### 🧠 Culture
+
+Perbedaan budaya yang perlu diketahui.
+
+### ⚠️ Hidden Frictions
+
+Hal-hal yang sering tidak diketahui traveler sebelum tiba.
+
+### 🛬 Arrival
+
+Apa yang perlu dilakukan ketika pertama kali tiba.
+
+### 🚨 Emergency
+
+Informasi penting jika terjadi masalah.
+
+---
+
+# 3. Core Feature: Personalized Readiness Plan
+
+Setiap rekomendasi memiliki priority.
+
+### 🔴 Must Prepare
+
+Hal yang perlu diperhatikan sebelum berangkat.
+
+### 🟡 Recommended
+
+Hal yang sangat mungkin membantu.
+
+### 🟢 Optional
+
+Tergantung preference traveler.
+
+AI juga menjelaskan:
+
+> **Why?**
+
+Contoh:
+
+### 🚽 Portable Bidet
+
+**Priority:** 🟡 Recommended
+
+> Kamu berasal dari Indonesia dan mungkin terbiasa menggunakan air setelah menggunakan toilet. Fasilitas toilet di negara tujuan dapat berbeda, sehingga portable bidet dapat menjadi opsi praktis.
+
+Jadi aplikasi tidak hanya mengatakan **apa yang harus dilakukan**, tetapi juga **mengapa**.
+
+---
+
+# 4. Culture Gap Engine
+
+Salah satu fitur utama adalah:
+
+## 🇮🇩 → 🇰🇷 Culture Gap
+
+AI menjelaskan perbedaan berdasarkan **negara asal traveler**, bukan hanya memberikan artikel budaya umum.
+
+Kategori:
+
+* Dining
+* Greeting
+* Public transportation
+* Queueing
+* Personal space
+* Shopping
+* Tipping
+* Bathroom
+* Trash
+* Noise
+* Social interaction
+* Religious/cultural etiquette
+* Dress
+* Communication
+
+Tujuannya:
+
+> **“Apa yang akan terasa berbeda bagi orang Indonesia ketika berada di negara ini?”**
+
+Konsep ini dapat diperluas menjadi:
+
+🇮🇩 → 🇯🇵
+🇮🇩 → 🇸🇬
+🇮🇩 → 🇹🇭
+🇮🇩 → 🇩🇪
+🇮🇩 → 🇺🇸
+dan seterusnya.
+
+---
+
+# 5. Things Nobody Tells You
+
+Produk memiliki section khusus:
+
+## 💡 Things Indonesians Should Know
+
+Contohnya:
+
+🚽 **Bathroom**
+
+> Pertimbangkan portable bidet.
+
+📱 **Apps**
+
+> Beberapa kebutuhan sehari-hari lebih banyak menggunakan aplikasi lokal.
+
+💳 **Payment**
+
+> Jangan hanya mengandalkan satu metode pembayaran.
+
+🚇 **Transport**
+
+> Ketahui sistem transport card/pass sebelum tiba.
+
+🗑️ **Trash**
+
+> Kebiasaan membuang sampah dapat berbeda.
+
+📶 **Internet**
+
+> Siapkan connectivity sebelum meninggalkan airport.
+
+Kategori ini menjadi kumpulan **practical local knowledge**, bukan sekadar tourist attractions.
+
+---
+
+# 6. Local App Intelligence
+
+AI membuat:
+
+## 📱 Your Destination App Stack
+
+Aplikasi dikategorikan berdasarkan fungsi:
+
+**Essential**
+
+* Navigation
+* Transportation
+* Translation
+
+**Useful**
+
+* Taxi
+* Restaurant
+* Shopping
+* Delivery
+
+**Emergency**
+
+* Emergency services
+* Healthcare
+* Embassy/consular information
+
+AI juga memberikan warning jika suatu aplikasi:
+
+* membutuhkan nomor lokal
+* membutuhkan verifikasi tertentu
+* memiliki keterbatasan regional
+* tidak tersedia di region tertentu
+* memiliki alternatif lokal
+
+---
+
+# 7. AI Packing Intelligence
+
+User tidak mendapatkan checklist generik.
+
+AI mempertimbangkan:
+
+**Destination + Date + Weather + Duration + Activities + Traveler Profile + Local Context**
+
+Kemudian menghasilkan:
+
+### Must Bring
+
+Barang penting.
+
+### Consider Buying
+
+Barang yang mungkin lebih baik dibeli sebelum berangkat.
+
+### Optional
+
+Barang yang tergantung preference.
+
+AI juga dapat menjawab:
+
+> **“Do I need this?”**
+
+User dapat memasukkan barang dan AI memberikan penilaian kontekstual.
+
+---
+
+# 8. Arrival Assistant
+
+Setelah traveler tiba, fungsi aplikasi berubah dari:
+
+> **Prepare**
+
+menjadi:
+
+> **Navigate**
+
+Contoh:
+
+### First 2 Hours
+
+1. Activate connectivity
+2. Obtain transportation method
+3. Get necessary cash/payment method
+4. Navigate to accommodation
+5. Complete check-in
+6. Save emergency information
+
+AI dapat menyesuaikan instruksi berdasarkan lokasi dan itinerary traveler.
+
+---
+
+# 9. Culture Shock Simulator
+
+Traveler dapat belajar melalui scenario interaktif.
+
+Contoh:
+
+> Kamu masuk restoran di negara tujuan. Staff mengatakan sesuatu yang tidak kamu pahami dan menunjuk ke meja.
+
+AI bertanya:
+
+> **What would you do?**
+
+User memilih respons.
+
+Kemudian AI menjelaskan:
+
+* respons yang sesuai
+* cultural context
+* kenapa pilihan lain kurang tepat
+* bagaimana situasi tersebut biasanya berlangsung
+
+Ini membuat edukasi budaya menjadi **interactive dan AI-driven**, bukan sekadar membaca artikel.
+
+---
+
+# 10. Short Stay → Long Stay
+
+Produk tidak hanya untuk turis.
+
+User dapat memilih:
+
+### ✈️ Tourism
+
+Beberapa hari sampai beberapa minggu.
+
+### 🎓 Study
+
+Pelajar/mahasiswa.
+
+### 💼 Work
+
+Business trip atau pekerja.
+
+### 🧑‍💻 Digital Nomad
+
+Longer stay.
+
+### 🏠 Long Stay
+
+Beberapa bulan atau lebih.
+
+Kebutuhan AI berubah berdasarkan durasi.
+
+Contoh:
+
+**Short stay**
+
+> Transport card
+
+**Long stay**
+
+> Residence/registration requirements
+> Local phone number
+> Banking
+> Housing
+> Healthcare
+> Local administrative requirements
+
+---
+
+# 11. AI Architecture
+
+AI bukan sekadar chatbot.
+
+Sistem bekerja sebagai:
+
+```text
+Traveler Profile
+       ↓
+Destination Context
+       ↓
+Trip Duration
+       ↓
+Travel Purpose
+       ↓
+┌───────────────────────────┐
+│ AI TRAVEL READINESS ENGINE │
+└───────────────────────────┘
+       ↓
+┌──────────┬──────────┬──────────┐
+│Regulation│ Culture  │Local Life│
+└──────────┴──────────┴──────────┘
+       ↓
+Personalization
+       ↓
+Travel Readiness Plan
+       ↓
+Action / Recommendation
+```
+
+Untuk informasi yang cepat berubah seperti:
+
+* visa
+* entry requirements
+* transportation rules
+* local regulations
+* app availability
+
+AI harus menggunakan **current/official sources** dan menunjukkan waktu verifikasi.
+
+Sementara practical tips dan cultural insights dapat berasal dari:
+
+* local sources
+* traveler experiences
+* community knowledge
+* curated knowledge base
+
+Sehingga AI tidak menjadi satu-satunya sumber kebenaran.
+
+---
+
+# 12. User Journey
+
+### Step 1
+
+User memasukkan perjalanan.
+
+> Indonesia → Korea
+> 10 days
+> Seoul + Busan
+
+### Step 2
+
+AI membuat:
+
+> **Travel Readiness Profile**
+
+### Step 3
+
+User mendapatkan:
+
+> **78% Ready**
+
+dengan breakdown:
+
+* Documents
+* Connectivity
+* Payment
+* Transportation
+* Culture
+* Packing
+* Emergency
+
+### Step 4
+
+AI menunjukkan:
+
+> **3 things you should fix before departure**
+
+### Step 5
+
+User melakukan persiapan.
+
+### Step 6
+
+Ketika sudah tiba:
+
+> **Switch to Travel Mode**
+
+Aplikasi berubah menjadi local travel assistant.
+
+---
+
+# 13. Business Model
+
+Produk menggunakan model **multi-revenue**, tetapi tidak semuanya menjadi fokus sejak awal.
+
+## Primary: Pay-per-trip
+
+User membayar untuk personalized Travel Readiness Pack.
+
+Contoh:
+
+> Korea Travel Readiness Pack
+> Rp19.000–49.000 / trip
+
+Bukan subscription bulanan karena kebutuhan utama muncul ketika seseorang akan traveling.
+
+---
+
+## Secondary: Affiliate Commerce
+
+Ketika AI merekomendasikan kebutuhan yang memang relevan:
+
+* eSIM
+* travel insurance
+* airport transfer
+* transport pass
+* attraction tickets
+* hotel
+* tours
+
+User dapat melakukan pembelian melalui platform.
+
+Revenue:
+
+> **Commission per transaction**
+
+Sehingga:
+
+**AI recommendation → action → transaction → revenue**
+
+---
+
+## Future: B2B
+
+Produk dapat dijual sebagai:
+
+### Travel Agency Assistant
+
+Travel agency memberikan AI companion kepada customer mereka.
+
+### Airline
+
+Traveler mendapatkan preparation assistant setelah booking.
+
+### Telco
+
+AI merekomendasikan connectivity dan roaming.
+
+### Bank
+
+AI membantu customer mempersiapkan international travel.
+
+### OTA
+
+Travel readiness menjadi fitur tambahan setelah user melakukan booking.
+
+---
+
+## Future: Travel Readiness API
+
+Platform dapat menyediakan API:
+
+```text
+Traveler
+Destination
+Duration
+Purpose
+Profile
+       ↓
+Travel Readiness API
+       ↓
+Documents
+Apps
+Packing
+Culture
+Payment
+Transport
+Connectivity
+Emergency
+```
+
+Platform lain dapat mengintegrasikan sistem ini tanpa membangun engine sendiri.
+
+---
+
+# 14. Business Model Roadmap
+
+```text
+PHASE 1
+B2C
+│
+├── Pay-per-trip
+│
+└── Affiliate
+       ↓
+PHASE 2
+B2B
+│
+├── Travel Agency
+├── Airline
+├── Telco
+└── Bank
+       ↓
+PHASE 3
+B2B/API
+│
+└── Travel Readiness API
+```
+
+Jadi **bukan memilih semua model bisnis sekaligus**.
+
+Untuk MVP:
+
+> **Primary:** Pay-per-trip
+> **Supporting:** Affiliate
+> **Scale:** B2B/API
+
+---
+
+# 15. Positioning
+
+Produk ini bukan:
+
+❌ Travel itinerary planner
+❌ Hotel booking app
+❌ Tourist attraction recommendation
+❌ Generic AI travel chatbot
+
+Tetapi:
+
+> ### **AI Travel Readiness Copilot**
+
+Fokusnya:
+
+> **Prepare → Understand → Navigate → Adapt**
+
+atau:
+
+> **Know what to bring. Know what to expect. Know what to do.**
+
+---
+
+# 16. MVP
+
+Untuk MVP, tidak perlu langsung mencakup seluruh dunia.
+
+Mulai dari:
+
+### 🇮🇩 Indonesia → 🇰🇷 South Korea
+
+Fitur:
+
+1. Traveler profile
+2. Personalized readiness checklist
+3. Packing intelligence
+4. Local app recommendations
+5. Payment guide
+6. Transportation guide
+7. Culture Gap
+8. Things Indonesians Should Know
+9. Arrival checklist
+10. AI Travel Assistant
+
+Kemudian perluas:
+
+> Korea → Japan → Singapore → Thailand → Europe → US → Global
+
+---
+
+# Core Value Proposition
+
+> **Traveling abroad shouldn't require you to learn an entire country from scattered TikToks, Reddit posts, and blogs.**
+
+**AI Travel Readiness Copilot turns your destination, duration, background, and travel purpose into a personalized preparation plan, helping you know what to bring, what to install, what to expect, what cultural differences to understand, and what to do when you arrive.**
+
+### Singkatnya:
+
+> **Itinerary tells you where to go.
+> Travel Readiness tells you how to survive there.**
