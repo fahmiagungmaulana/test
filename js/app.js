@@ -495,25 +495,27 @@ function renderCultureGaps(dest) {
   container.innerHTML = gaps.map(g => `
     <div class="culture-gap-card">
       <div class="culture-gap-header">
-        <h3 style="font-size: 1.15rem; display: flex; align-items: center; gap: 8px;">
-          <span>${g.icon || '🧠'}</span> ${g.topic}
-        </h3>
+        <div class="culture-gap-title-group">
+          <div class="culture-icon-badge">${g.icon || '🧠'}</div>
+          <h3 class="culture-gap-title">${g.topic}</h3>
+        </div>
         <span class="badge badge-info">Cultural Contrast</span>
       </div>
 
-      <div class="culture-gap-split">
-        <div class="culture-col origin">
-          <h4><i class="fa-solid fa-flag"></i> In ${state.currentOrigin} (Origin)</h4>
+      <div class="gap-comparison-row">
+        <div class="gap-box origin">
+          <div class="gap-box-label"><i class="fa-solid fa-flag"></i> In ${state.currentOrigin} (Origin)</div>
           <p>${g.originDesc}</p>
         </div>
-        <div class="culture-col dest">
-          <h4><i class="fa-solid fa-location-dot"></i> In ${dest.name || state.currentDestName} (Destination)</h4>
+        <div class="gap-box dest">
+          <div class="gap-box-label"><i class="fa-solid fa-location-dot"></i> In ${dest.name || state.currentDestName} (Destination)</div>
           <p>${g.destDesc}</p>
         </div>
       </div>
 
-      <div class="culture-rule-highlight">
-        <strong><i class="fa-solid fa-lightbulb"></i> Golden Rule for You:</strong> ${g.rule}
+      <div class="gap-action-tip">
+        <i class="fa-solid fa-lightbulb"></i>
+        <div><strong>Golden Rule for You:</strong> ${g.rule}</div>
       </div>
     </div>
   `).join("");
@@ -526,17 +528,17 @@ function renderHiddenFrictions(dest) {
 
   const frictions = dest.hiddenFrictions || [];
   container.innerHTML = frictions.map(f => `
-    <div class="readiness-item-card">
-      <div>
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+    <div class="friction-card">
+      <div class="friction-card-top">
+        <div class="friction-header-row">
           <span class="badge ${f.severity === 'critical' ? 'badge-must' : 'badge-rec'}">${f.category || 'Local Practice'}</span>
-          <span style="font-size: 1.5rem;">${f.icon || '💡'}</span>
+          <div class="friction-icon-circle">${f.icon || '💡'}</div>
         </div>
-        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--text-primary);">${f.title}</h3>
-        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">${f.detail}</p>
+        <h3 class="friction-title">${f.title}</h3>
+        <p class="friction-desc">${f.detail}</p>
       </div>
-      <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-color); font-size: 0.8rem; color: var(--text-muted);">
-        <i class="fa-solid fa-circle-exclamation"></i> Verified local reality
+      <div class="friction-meta-footer">
+        <i class="fa-solid fa-circle-check"></i> Verified Local Reality
       </div>
     </div>
   `).join("");
@@ -550,28 +552,31 @@ function renderAppStack(dest) {
   const apps = dest.appStack || [];
   container.innerHTML = apps.map(app => `
     <div class="app-card">
-      <div>
+      <div class="app-card-content">
         <div class="app-header">
-          <div class="app-icon-img">${app.icon || '📱'}</div>
-          <div class="app-meta">
-            <span class="badge badge-info" style="margin-bottom: 2px;">${app.badge || 'Essential'}</span>
-            <h3>${app.name}</h3>
-            <span>${app.role}</span>
+          <div class="app-brand">
+            <div class="app-icon-wrap">${app.icon || '📱'}</div>
+            <div class="app-title-group">
+              <h3 class="app-name">${app.name}</h3>
+              <span class="app-category">${app.role}</span>
+            </div>
           </div>
+          <span class="badge badge-info">${app.badge || 'Essential'}</span>
         </div>
 
-        <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0.75rem 0; line-height: 1.5;">
+        <p class="app-desc">
           ${app.desc}
         </p>
 
         ${app.warning ? `
-          <div class="app-warning-pill">
-            <i class="fa-solid fa-triangle-exclamation"></i> <strong>Note:</strong> ${app.warning}
+          <div class="app-warning-box">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span><strong>Note:</strong> ${app.warning}</span>
           </div>
         ` : ''}
       </div>
 
-      <button class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 8px;" onclick="alert('Pre-install ${app.name} prior to departure.')">
+      <button class="btn-secondary app-install-btn" onclick="alert('Pre-install ${app.name} prior to departure.')">
         <i class="fa-solid fa-download"></i> Pre-install App
       </button>
     </div>
@@ -586,46 +591,64 @@ function renderPackingMatrix(dest) {
   const matrix = dest.packingMatrix || { must: [], rec: [], opt: [] };
 
   container.innerHTML = `
-    <div class="readiness-item-card">
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
-        <h4 style="color: var(--status-must);"><i class="fa-solid fa-circle-exclamation"></i> Must Bring (Essential)</h4>
+    <div class="packing-column-card">
+      <div class="packing-header must">
+        <div class="packing-header-title">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <h4>Must Bring (Essential)</h4>
+        </div>
         <span class="badge badge-must">Priority 1</span>
       </div>
-      <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+      <ul class="packing-items-list">
         ${(matrix.must || []).map(m => `
-          <li style="font-size: 0.88rem;">
-            <strong>${m.name}</strong>
-            <p style="color: var(--text-secondary); font-size: 0.8rem;">${m.desc}</p>
+          <li class="packing-item">
+            <div class="packing-item-bullet must"></div>
+            <div class="packing-item-text">
+              <strong>${m.name}</strong>
+              <p>${m.desc}</p>
+            </div>
           </li>
         `).join("")}
       </ul>
     </div>
 
-    <div class="readiness-item-card">
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
-        <h4 style="color: var(--status-rec);"><i class="fa-solid fa-cart-shopping"></i> Recommended to Bring</h4>
+    <div class="packing-column-card">
+      <div class="packing-header rec">
+        <div class="packing-header-title">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <h4>Recommended to Bring</h4>
+        </div>
         <span class="badge badge-rec">Priority 2</span>
       </div>
-      <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+      <ul class="packing-items-list">
         ${(matrix.rec || []).map(m => `
-          <li style="font-size: 0.88rem;">
-            <strong>${m.name}</strong>
-            <p style="color: var(--text-secondary); font-size: 0.8rem;">${m.desc}</p>
+          <li class="packing-item">
+            <div class="packing-item-bullet rec"></div>
+            <div class="packing-item-text">
+              <strong>${m.name}</strong>
+              <p>${m.desc}</p>
+            </div>
           </li>
         `).join("")}
       </ul>
     </div>
 
-    <div class="readiness-item-card">
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
-        <h4 style="color: var(--status-opt);"><i class="fa-solid fa-thumbs-up"></i> Optional / Personal</h4>
+    <div class="packing-column-card">
+      <div class="packing-header opt">
+        <div class="packing-header-title">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <h4>Optional / Personal</h4>
+        </div>
         <span class="badge badge-opt">Priority 3</span>
       </div>
-      <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+      <ul class="packing-items-list">
         ${(matrix.opt || []).map(m => `
-          <li style="font-size: 0.88rem;">
-            <strong>${m.name}</strong>
-            <p style="color: var(--text-secondary); font-size: 0.8rem;">${m.desc}</p>
+          <li class="packing-item">
+            <div class="packing-item-bullet opt"></div>
+            <div class="packing-item-text">
+              <strong>${m.name}</strong>
+              <p>${m.desc}</p>
+            </div>
           </li>
         `).join("")}
       </ul>
