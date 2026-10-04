@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travu | AI Travel Readiness Copilot</title>
   <meta name="description" content="Travu - AI-Powered Travel Readiness Copilot. Know what to pack, what to install, cultural gaps to navigate, payment methods, and your first 2 hours arrival checklist for any country.">
+  <link rel="icon" type="image/jpeg" href="assets/mascot-logo.jpg">
   
   <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,30 +24,37 @@
   <div class="ambient-bg">
     <div class="ambient-blob-1"></div>
     <div class="ambient-blob-2"></div>
+    <div class="ambient-grid-overlay"></div>
   </div>
 
   <!-- Site Navigation Header -->
   <header class="site-header">
     <div class="nav-container">
       <a href="#" class="brand-logo" id="brand-home-btn">
-        <div class="logo-icon">
-          <i class="fa-solid fa-compass"></i>
+        <div class="mascot-nav-avatar-wrap">
+          <img src="assets/mascot-logo.jpg" alt="Travu Mascot" class="mascot-nav-img">
+          <span class="status-pulse-dot" title="Travu Copilot Online"></span>
         </div>
-        <div>
-          <span>Travu</span>
-          <span style="font-size: 0.65rem; display: block; color: var(--text-muted); font-weight: 600; letter-spacing: 0.05em;">AI Travel Readiness Copilot</span>
+        <div class="brand-text-group">
+          <div class="brand-name-row">
+            <span class="brand-name">Travu</span>
+            <span class="brand-version-tag">AI Copilot</span>
+          </div>
+          <span class="brand-subtext">Travel Readiness Intelligence</span>
         </div>
       </a>
 
       <!-- Header Actions -->
       <div class="nav-actions">
         <!-- API Key Status / Setting Button -->
-        <button class="btn-secondary" id="ai-engine-status-btn" onclick="openApiKeyModal()" title="Gemini API Key Settings" style="padding: 7px 14px; font-size: 0.82rem;">
-          <i class="fa-solid fa-key" style="color: var(--accent-cyan);"></i>
-          <span id="ai-engine-label">Gemini API Key</span>
+        <button class="btn-api-badge" id="ai-engine-status-btn" onclick="openApiKeyModal()" title="Gemini API Key Settings">
+          <div class="api-pulse-indicator"></div>
+          <i class="fa-solid fa-key api-key-icon"></i>
+          <span id="ai-engine-label">Gemini Key</span>
         </button>
 
-        <button class="btn-icon" id="theme-toggle-btn" title="Toggle Theme (Dark / Light)" onclick="toggleTheme()">
+        <!-- Theme Toggle -->
+        <button class="btn-icon theme-toggle" id="theme-toggle-btn" title="Toggle Theme (Dark / Light)" onclick="toggleTheme()">
           <i class="fa-solid fa-moon" id="theme-icon"></i>
         </button>
       </div>
@@ -55,50 +63,126 @@
 
   <!-- Main Content -->
   <main>
-    <!-- Hero Section -->
+    <!-- Hero Section with Interactive Mascot Companion -->
     <section class="hero-section">
-      <div class="hero-tagline">
-        <i class="fa-solid fa-wand-magic-sparkles"></i> AI Travel Readiness Copilot
+      <div class="hero-grid-container">
+        
+        <!-- Hero Text Column -->
+        <div class="hero-content-col">
+          <div class="hero-tagline">
+            <span class="tagline-sparkle"><i class="fa-solid fa-sparkles"></i></span>
+            <span>Next-Gen AI Travel Readiness</span>
+            <span class="tagline-pill">v2.0 Live</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Itinerary tells you <span class="text-underline">where to go</span>.<br>
+            <span class="gradient-text">Travu teaches you how to survive.</span>
+          </h1>
+          
+          <p class="hero-sub">
+            Say goodbye to 40 opened Reddit tabs, confusing payment hacks, and unexpected culture shocks. Tell Travu your destination and get an instant, AI-generated survival blueprint before you board.
+          </p>
+
+          <!-- Quick Value Props -->
+          <div class="hero-feature-tags">
+            <div class="feature-tag-item">
+              <i class="fa-solid fa-shield-halved"></i> 100% Tailored AI Plan
+            </div>
+            <div class="feature-tag-item">
+              <i class="fa-solid fa-scale-balanced"></i> Real Culture Shock Radar
+            </div>
+            <div class="feature-tag-item">
+              <i class="fa-solid fa-mobile-screen"></i> Local App Intelligence
+            </div>
+            <div class="feature-tag-item">
+              <i class="fa-solid fa-plane-arrival"></i> First 2-Hour Runway Guide
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Mascot Visual Card Column -->
+        <div class="hero-mascot-col">
+          <div class="hero-mascot-card">
+            <div class="mascot-img-container">
+              <img src="assets/mascot-hero.jpg" alt="Travu the Explorer Ant" class="hero-mascot-image">
+              <div class="mascot-glow-ring"></div>
+            </div>
+            
+            <!-- Mascot Floating Speech Bubble -->
+            <div class="mascot-speech-bubble">
+              <div class="speech-badge">
+                <span class="mascot-name">🧭 Travu Explorer</span>
+                <span class="badge-online">Ready</span>
+              </div>
+              <p class="speech-quote">
+                "Where are we heading next? Pick your route below or describe your dream journey, and I’ll prep your personalized survival kit!"
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <h1 class="hero-title">
-        Itinerary tells you where to go.<br>
-        <span class="gradient-text">Travu tells you how to survive there.</span>
-      </h1>
-      <p class="hero-sub">
-        Traveling abroad shouldn't require you to learn an entire country from scattered TikToks, Reddit threads, and blogs. Generate your personalized readiness plan using quick fields or type a natural language prompt.
-      </p>
     </section>
 
-    <!-- Generation Mode Switcher & Card -->
-    <section class="configurator-wrapper">
-      <div class="configurator-card">
+    <!-- Generation Deck / Configurator Card -->
+    <section class="configurator-wrapper" id="plan-creator-section">
+      <div class="configurator-card modern-glass-deck">
+        
+        <!-- Deck Header & Mode Switcher -->
+        <div class="deck-header">
+          <div class="deck-title-group">
+            <div class="deck-icon-badge">
+              <i class="fa-solid fa-sliders"></i>
+            </div>
+            <div>
+              <h2 class="deck-title">Trip Readiness Configurator</h2>
+              <p class="deck-subtitle">Customize your travel parameters or write a prompt scenario</p>
+            </div>
+          </div>
 
-        <!-- Generator Method Tabs: Fields vs Natural Prompt -->
-        <div class="generator-mode-tabs">
-          <button class="gen-mode-tab-btn active" id="tab-btn-fields" onclick="switchGeneratorInputMode('fields')">
-            <i class="fa-solid fa-sliders"></i> Structured Fields
-          </button>
-          <button class="gen-mode-tab-btn" id="tab-btn-prompt" onclick="switchGeneratorInputMode('prompt')">
-            <i class="fa-solid fa-comment-dots"></i> Generate with Custom Prompt
-          </button>
+          <!-- Generator Method Tabs: Fields vs Natural Prompt -->
+          <div class="generator-mode-tabs">
+            <button class="gen-mode-tab-btn active" id="tab-btn-fields" onclick="switchGeneratorInputMode('fields')">
+              <i class="fa-solid fa-layer-group"></i> Structured Fields
+            </button>
+            <button class="gen-mode-tab-btn" id="tab-btn-prompt" onclick="switchGeneratorInputMode('prompt')">
+              <i class="fa-solid fa-pen-nib"></i> Custom Prompt
+            </button>
+          </div>
         </div>
         
         <!-- Validation / API Error Banner -->
-        <div id="config-error-banner" style="display: none;">
-          <i class="fa-solid fa-circle-exclamation" style="font-size: 1.2rem; flex-shrink: 0;"></i>
-          <span id="config-error-text">Validation message</span>
+        <div id="config-error-banner" class="modern-error-banner" style="display: none;">
+          <div class="error-banner-icon">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <div class="error-banner-content">
+            <strong class="error-banner-title">Input Notice</strong>
+            <span id="config-error-text">Validation message</span>
+          </div>
+          <button class="error-dismiss-btn" onclick="hideConfigError()"><i class="fa-solid fa-xmark"></i></button>
         </div>
 
         <!-- MODE A: Structured Fields Input -->
         <div id="gen-section-fields">
-          <div class="config-grid">
-            <!-- Origin -->
-            <div class="config-field">
-              <label class="config-label">
-                <span class="label-left"><i class="fa-solid fa-plane-departure"></i> Origin</span>
-                <span class="required-indicator">* Required</span>
-              </label>
-              <input type="text" class="config-input" id="cfg-origin" list="origin-suggestions" value="Indonesia" placeholder="Type origin (e.g. Indonesia, USA)..." required>
+          <div class="config-grid-modern">
+            
+            <!-- Origin Country Field -->
+            <div class="modern-field-card">
+              <div class="field-header">
+                <div class="field-label-group">
+                  <div class="field-icon origin-icon">
+                    <i class="fa-solid fa-plane-departure"></i>
+                  </div>
+                  <span class="field-name">Origin Country</span>
+                </div>
+                <span class="field-badge required">Required</span>
+              </div>
+              <div class="input-wrapper">
+                <input type="text" class="modern-input" id="cfg-origin" list="origin-suggestions" value="Indonesia" placeholder="e.g. Indonesia, USA, Singapore..." required>
+                <i class="fa-solid fa-location-dot input-trailing-icon"></i>
+              </div>
               <datalist id="origin-suggestions">
                 <option value="Indonesia">
                 <option value="United States">
@@ -111,16 +195,33 @@
                 <option value="France">
                 <option value="India">
                 <option value="Canada">
+                <option value="Netherlands">
               </datalist>
             </div>
 
-            <!-- Destination -->
-            <div class="config-field">
-              <label class="config-label">
-                <span class="label-left"><i class="fa-solid fa-plane-arrival"></i> Destination</span>
-                <span class="required-indicator">* Required</span>
-              </label>
-              <input type="text" class="config-input" id="cfg-destination" list="dest-suggestions" value="South Korea" placeholder="Type destination (e.g. South Korea, Japan)..." required>
+            <!-- Route Connector Arrow Graphic (Visual Aid) -->
+            <div class="route-connector-visual" aria-hidden="true">
+              <div class="connector-line"></div>
+              <div class="connector-arrow">
+                <i class="fa-solid fa-plane"></i>
+              </div>
+            </div>
+
+            <!-- Destination Country Field -->
+            <div class="modern-field-card">
+              <div class="field-header">
+                <div class="field-label-group">
+                  <div class="field-icon dest-icon">
+                    <i class="fa-solid fa-plane-arrival"></i>
+                  </div>
+                  <span class="field-name">Destination</span>
+                </div>
+                <span class="field-badge required">Required</span>
+              </div>
+              <div class="input-wrapper">
+                <input type="text" class="modern-input" id="cfg-destination" list="dest-suggestions" value="South Korea" placeholder="e.g. South Korea, Japan, Switzerland..." required>
+                <i class="fa-solid fa-earth-asia input-trailing-icon"></i>
+              </div>
               <datalist id="dest-suggestions">
                 <option value="South Korea">
                 <option value="Japan">
@@ -134,77 +235,130 @@
                 <option value="Australia">
                 <option value="Vietnam">
                 <option value="Switzerland">
+                <option value="Taiwan">
+                <option value="China">
               </datalist>
             </div>
 
-            <!-- City / Region -->
-            <div class="config-field">
-              <label class="config-label">
-                <span class="label-left"><i class="fa-solid fa-city"></i> City / Region</span>
-                <span class="required-indicator">* Required</span>
-              </label>
-              <input type="text" class="config-input" id="cfg-city" value="Seoul + Busan" placeholder="e.g. Seoul + Busan, Tokyo" required>
+            <!-- Specific Cities / Region -->
+            <div class="modern-field-card">
+              <div class="field-header">
+                <div class="field-label-group">
+                  <div class="field-icon city-icon">
+                    <i class="fa-solid fa-city"></i>
+                  </div>
+                  <span class="field-name">Cities / Regions</span>
+                </div>
+                <span class="field-badge required">Required</span>
+              </div>
+              <div class="input-wrapper">
+                <input type="text" class="modern-input" id="cfg-city" value="Seoul + Busan" placeholder="e.g. Seoul + Busan, Tokyo, Zurich..." required>
+                <i class="fa-solid fa-map-pin input-trailing-icon"></i>
+              </div>
             </div>
 
-            <!-- Duration -->
-            <div class="config-field">
-              <label class="config-label">
-                <span class="label-left"><i class="fa-regular fa-calendar-days"></i> Duration</span>
-              </label>
-              <select class="config-select" id="cfg-duration">
-                <option value="1 - 5 Days">1 - 5 Days (Short Trip)</option>
-                <option value="6 - 14 Days" selected>6 - 14 Days (Standard Holiday)</option>
-                <option value="15 - 30 Days">15 - 30 Days (Extended Stay)</option>
-                <option value="> 1 Month">> 1 Month (Study / Long Stay)</option>
-              </select>
+            <!-- Trip Duration -->
+            <div class="modern-field-card">
+              <div class="field-header">
+                <div class="field-label-group">
+                  <div class="field-icon duration-icon">
+                    <i class="fa-regular fa-calendar-check"></i>
+                  </div>
+                  <span class="field-name">Trip Duration</span>
+                </div>
+                <span class="field-badge optional">Select</span>
+              </div>
+              <div class="select-wrapper">
+                <select class="modern-select" id="cfg-duration">
+                  <option value="1 - 5 Days">1 - 5 Days (Short Stay / Weekend)</option>
+                  <option value="6 - 14 Days" selected>6 - 14 Days (Standard Holiday)</option>
+                  <option value="15 - 30 Days">15 - 30 Days (Extended Trip)</option>
+                  <option value="> 1 Month">> 1 Month (Study / Work Relocation)</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
             </div>
 
-            <!-- Purpose -->
-            <div class="config-field">
-              <label class="config-label">
-                <span class="label-left"><i class="fa-solid fa-bullseye"></i> Purpose</span>
-              </label>
-              <select class="config-select" id="cfg-purpose">
-                <option value="tourism" selected>✈️ Tourism & Leisure</option>
-                <option value="study">🎓 Study Abroad / Exchange</option>
-                <option value="work">💼 Business & Work</option>
-                <option value="nomad">🧑‍💻 Digital Nomad</option>
-                <option value="longstay">🏠 Long Stay Relocation</option>
-              </select>
+            <!-- Travel Purpose -->
+            <div class="modern-field-card">
+              <div class="field-header">
+                <div class="field-label-group">
+                  <div class="field-icon purpose-icon">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                  </div>
+                  <span class="field-name">Trip Purpose</span>
+                </div>
+                <span class="field-badge optional">Select</span>
+              </div>
+              <div class="select-wrapper">
+                <select class="modern-select" id="cfg-purpose">
+                  <option value="tourism" selected>✈️ Tourism & Leisure</option>
+                  <option value="study">🎓 Study Abroad / Exchange</option>
+                  <option value="work">💼 Business & Work Meeting</option>
+                  <option value="nomad">🧑‍💻 Digital Nomad / Remote Work</option>
+                  <option value="longstay">🏠 Long Stay & Relocation</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
             </div>
 
-            <!-- Profile -->
-            <div class="config-field">
-              <label class="config-label">
-                <span class="label-left"><i class="fa-solid fa-users"></i> Profile</span>
-              </label>
-              <select class="config-select" id="cfg-group">
-                <option value="solo" selected>🎒 Solo Traveler</option>
-                <option value="couple">💑 Couple / Partners</option>
-                <option value="family">👨‍👩‍👦 Family with Kids</option>
-                <option value="friends">👥 Group of Friends</option>
-              </select>
+            <!-- Traveler Profile -->
+            <div class="modern-field-card">
+              <div class="field-header">
+                <div class="field-label-group">
+                  <div class="field-icon group-icon">
+                    <i class="fa-solid fa-user-group"></i>
+                  </div>
+                  <span class="field-name">Traveler Profile</span>
+                </div>
+                <span class="field-badge optional">Select</span>
+              </div>
+              <div class="select-wrapper">
+                <select class="modern-select" id="cfg-group">
+                  <option value="solo" selected>🎒 Solo Traveler</option>
+                  <option value="couple">💑 Couple / Partners</option>
+                  <option value="family">👨‍👩‍👧 Family with Kids</option>
+                  <option value="friends">👥 Group of Friends</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
             </div>
+
           </div>
         </div>
 
         <!-- MODE B: Natural Freeform Prompt Input -->
         <div id="gen-section-prompt" style="display: none;">
-          <div style="margin-bottom: 1rem;">
-            <label class="config-label" style="margin-bottom: 8px;">
-              <span class="label-left"><i class="fa-solid fa-pen-fancy"></i> Describe Your Trip in Natural Language</span>
-              <span class="required-indicator">* Required</span>
-            </label>
-            <textarea class="config-textarea" id="cfg-freeform-prompt" rows="4" placeholder="e.g., I am an Indonesian student traveling to South Korea for a 10-day solo vacation visiting Seoul and Busan on a backpacker budget. I need to know essential apps (like Naver Map), bidet situation in public toilets, cashless card rules, winter packing, and how to avoid pork..."></textarea>
+          <div class="modern-prompt-card">
+            <div class="field-header" style="margin-bottom: 10px;">
+              <div class="field-label-group">
+                <div class="field-icon prompt-icon">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <span class="field-name">Natural Language Scenario Description</span>
+              </div>
+              <span class="field-badge required">Custom Scenario</span>
+            </div>
+            
+            <textarea class="modern-textarea" id="cfg-freeform-prompt" rows="4" placeholder="Describe your trip in natural language. Example: 'I am an Indonesian solo traveler visiting South Korea for 10 days in winter. Visiting Seoul and Busan on a backpacker budget. I want to know essential apps (Naver Map vs Kakao), public transport rules, bidet situation, cashless payment quirks, and how to avoid pork in restaurants...'"></textarea>
+            
+            <!-- Prompt Suggestion Chips -->
+            <div class="prompt-chips-wrapper">
+              <span class="prompt-chips-label"><i class="fa-solid fa-lightbulb"></i> Try Prompt Templates:</span>
+              <button class="prompt-template-chip" onclick="insertPromptTemplate('korea-student')">🎓 Student in Seoul</button>
+              <button class="prompt-template-chip" onclick="insertPromptTemplate('japan-photography')">📸 Japan Autumn Solo</button>
+              <button class="prompt-template-chip" onclick="insertPromptTemplate('singapore-family')">👨‍👩‍👧 Singapore with Toddler</button>
+              <button class="prompt-template-chip" onclick="insertPromptTemplate('swiss-winter')">❄️ Switzerland Scenic Trains</button>
+            </div>
           </div>
         </div>
 
-        <!-- Quick Presets & Generate Button -->
-        <div class="config-footer">
-          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-            <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">
-              <i class="fa-solid fa-bolt"></i> Quick Examples:
-            </span>
+        <!-- Configurator Footer & Action Bar -->
+        <div class="config-footer-modern">
+          <div class="presets-section">
+            <div class="presets-label">
+              <i class="fa-solid fa-bolt"></i> Popular Routes:
+            </div>
             <div class="config-preset-pills">
               <button class="preset-pill active" onclick="applyPresetValues('Indonesia', 'South Korea', 'Seoul + Busan', '6 - 14 Days', 'tourism', 'solo')">🇮🇩 ➔ 🇰🇷 Korea Solo</button>
               <button class="preset-pill" onclick="applyPresetValues('Indonesia', 'South Korea', 'Seoul (Yonsei)', '> 1 Month', 'study', 'solo')">🇮🇩 ➔ 🇰🇷 Korea Student</button>
@@ -213,27 +367,62 @@
             </div>
           </div>
 
-          <button class="btn-primary" id="btn-generate-plan" onclick="startPlanGeneration()">
-            <i class="fa-solid fa-wand-magic-sparkles"></i> Generate with Gemini AI
-          </button>
+          <div class="cta-action-group">
+            <button class="btn-generate-main" id="btn-generate-plan" onclick="startPlanGeneration()">
+              <div class="btn-shine"></div>
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <span>Generate Readiness Plan</span>
+            </button>
+          </div>
         </div>
+
       </div>
     </section>
 
-    <!-- AI Generation Loading State -->
+    <!-- AI Generation Hologram Loading State with Mascot -->
     <div class="ai-generating-loader" id="ai-loader">
-      <div class="ai-spinner-orbit"></div>
-      <h3 style="font-size: 1.35rem; margin-bottom: 8px;" id="ai-loader-title">Synthesizing with Google Gemini AI...</h3>
-      <p style="color: var(--text-secondary); font-size: 0.95rem;" id="ai-loader-text">
-        Sending your trip context to Google Gemini AI model...
-      </p>
+      <div class="loader-card-glass">
+        <div class="mascot-loader-visual">
+          <img src="assets/mascot-tech.jpg" alt="Travu Mascot AI Synthesizing" class="mascot-tech-loader-img">
+          <div class="radar-scan-ring"></div>
+        </div>
+        
+        <div class="loader-content-text">
+          <div class="loader-badge">
+            <span class="radar-dot"></span>
+            <span>Google Gemini AI Engine Active</span>
+          </div>
+          <h3 class="loader-title" id="ai-loader-title">Synthesizing Your Travel Readiness Plan...</h3>
+          <p class="loader-desc" id="ai-loader-text">
+            Travu is analyzing bilateral transit policies, local payment infrastructure, cultural friction points, and emergency runways.
+          </p>
+
+          <!-- Live Step Progress Tracker -->
+          <div class="loader-step-tracker">
+            <div class="loader-step-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Context & Regulation Verification</span>
+            </div>
+            <div class="loader-step-item active">
+              <i class="fa-solid fa-spinner fa-spin"></i>
+              <span>Cultural Norms & Local Hacks Mapping</span>
+            </div>
+            <div class="loader-step-item">
+              <i class="fa-regular fa-circle"></i>
+              <span>Airport Runway Timeline Synthesis</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Generated Dashboard Results Area (Appears ONLY after AI Generation) -->
     <section class="dashboard-container" id="dashboard-section">
       
-      <!-- Readiness Score Banner -->
-      <div class="readiness-banner">
+      <!-- Readiness Score & Mascot Status Banner -->
+      <div class="readiness-banner-modern">
+        
+        <!-- Score Circle -->
         <div class="score-circle-wrapper">
           <svg class="score-svg" viewBox="0 0 140 140">
             <defs>
@@ -248,55 +437,73 @@
           </svg>
           <div class="score-number-display">
             <div class="score-val gradient-text" id="score-val-text">75%</div>
-            <div class="score-sub">Ready</div>
+            <div class="score-sub">Readiness</div>
           </div>
         </div>
 
+        <!-- Banner Info Content -->
         <div class="banner-info">
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;">
-            <span class="badge badge-info" id="active-route-badge">Origin ➔ Destination</span>
+          <div class="banner-badges-row">
+            <span class="badge badge-route" id="active-route-badge">Origin ➔ Destination</span>
             <span class="badge badge-rec" id="active-purpose-badge">Tourism</span>
-            <span class="badge badge-opt" id="active-ai-source-badge"><i class="fa-solid fa-microchip"></i> Gemini AI Live</span>
+            <span class="badge badge-opt" id="active-ai-source-badge"><i class="fa-solid fa-microchip"></i> Live Gemini AI</span>
           </div>
-          <h2 id="plan-headline">Personalized Travel Readiness Plan</h2>
-          <p id="plan-description">
-            Your custom travel readiness blueprint has been synthesized by Gemini AI.
+          <h2 id="plan-headline" class="banner-headline">Personalized Travel Readiness Plan</h2>
+          <p id="plan-description" class="banner-subtext">
+            Your customized readiness roadmap has been synthesized based on your origin, destination, and trip profile.
           </p>
+          
           <div class="banner-stat-grid">
-            <div class="stat-chip">
-              <span style="color: var(--status-must);">🔴 Must Prepare:</span>
+            <div class="stat-chip must">
+              <span class="stat-dot red"></span>
+              <span>Must Prepare:</span>
               <strong id="stat-must-count">5 Items</strong>
             </div>
-            <div class="stat-chip">
-              <span style="color: var(--status-rec);">🟡 Recommended:</span>
+            <div class="stat-chip rec">
+              <span class="stat-dot yellow"></span>
+              <span>Recommended:</span>
               <strong id="stat-rec-count">4 Items</strong>
             </div>
-            <div class="stat-chip">
-              <span style="color: var(--status-opt);">🟢 Optional:</span>
+            <div class="stat-chip opt">
+              <span class="stat-dot green"></span>
+              <span>Optional:</span>
               <strong id="stat-opt-count">2 Items</strong>
             </div>
-            <div class="stat-chip">
-              <span style="color: var(--accent-cyan);"><i class="fa-solid fa-circle-check"></i> Completed:</span>
+            <div class="stat-chip done">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Checked:</span>
               <strong id="stat-done-count">0 / 11</strong>
             </div>
           </div>
         </div>
 
-        <!-- Download Action -->
-        <div>
-          <button class="btn-primary" onclick="downloadReadinessPack()">
-            <i class="fa-solid fa-file-arrow-down"></i> Download Readiness PDF
+        <!-- Mascot Advice Callout & Download Action -->
+        <div class="banner-right-actions">
+          <div class="mascot-mini-advice">
+            <div class="mascot-mini-avatar">
+              <img src="assets/mascot-logo.jpg" alt="Travu">
+            </div>
+            <div class="mascot-advice-text">
+              <strong id="mascot-advice-title">Travu's Advice:</strong>
+              <span id="mascot-advice-sub">Review critical pre-departure checklists before boarding!</span>
+            </div>
+          </div>
+
+          <button class="btn-download-pdf" onclick="downloadReadinessPack()">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span>Download Survival PDF</span>
           </button>
         </div>
+
       </div>
 
       <!-- MODE SWITCHER: Preparation Mode vs Live Arrival Mode -->
       <div class="dashboard-mode-selector">
         <button class="dash-mode-card active" id="btn-dash-prep-mode" onclick="switchDashboardMode('prep')">
-          <div class="dash-mode-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+          <div class="dash-mode-icon"><i class="fa-solid fa-shield-halved"></i></div>
           <div class="dash-mode-text">
             <strong>🛡️ Preparation Mode</strong>
-            <span>Checklists, Cultural Gaps, App Stack, Packing & Simulations before departure</span>
+            <span>Checklists, Cultural Radar, App Stack, Packing & Simulations before flying</span>
           </div>
         </button>
         <button class="dash-mode-card" id="btn-dash-arrival-mode" onclick="switchDashboardMode('arrival')">
@@ -310,6 +517,7 @@
 
       <!-- VIEW 1: PREPARATION MODE VIEW -->
       <div id="view-preparation-mode">
+        
         <!-- Critical Warnings Alert -->
         <div class="critical-alerts-card" id="critical-alerts-container">
           <div class="alert-header">
@@ -346,15 +554,15 @@
 
         <!-- TAB 1: READINESS CHECKLIST -->
         <div class="tab-panel active" id="tab-checklist">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
-            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <div class="tab-panel-toolbar">
+            <div class="filter-pills-group">
               <button class="preset-pill active" onclick="filterReadinessPriority('all', this)">All Items (<span id="count-filter-all">11</span>)</button>
               <button class="preset-pill" onclick="filterReadinessPriority('must', this)">🔴 Must Prepare (<span id="count-filter-must">5</span>)</button>
               <button class="preset-pill" onclick="filterReadinessPriority('rec', this)">🟡 Recommended (<span id="count-filter-rec">4</span>)</button>
               <button class="preset-pill" onclick="filterReadinessPriority('opt', this)">🟢 Optional (<span id="count-filter-opt">2</span>)</button>
             </div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">
-              <i class="fa-solid fa-circle-info"></i> Check items to live update your Readiness Score.
+            <div class="toolbar-hint">
+              <i class="fa-solid fa-circle-check"></i> Check items as you pack to raise your readiness score.
             </div>
           </div>
 
@@ -363,12 +571,13 @@
 
         <!-- TAB 2: CULTURE GAP ENGINE -->
         <div class="tab-panel" id="tab-culture">
-          <div style="margin-bottom: 1.5rem;">
-            <h2 style="font-size: 1.4rem; margin-bottom: 6px;">
+          <div class="tab-panel-intro">
+            <div class="section-intro-badge"><i class="fa-solid fa-earth-americas"></i> Bilateral Cultural Intelligence</div>
+            <h2 class="section-intro-title">
               <span id="culture-origin-title">Origin</span> ➔ <span id="culture-dest-title">Destination</span> Culture Gap Engine
             </h2>
-            <p style="color: var(--text-secondary); font-size: 0.95rem;">
-              Travu AI analyzes cultural differences specifically based on your background—highlighting customs and norms that frequently cause friction or confusion.
+            <p class="section-intro-desc">
+              Travu AI analyzes cultural differences specifically based on your background—highlighting customs and norms that frequently cause friction, misunderstanding, or embarrassment.
             </p>
           </div>
 
@@ -377,11 +586,11 @@
 
         <!-- TAB 3: THINGS NOBODY TELLS YOU -->
         <div class="tab-panel" id="tab-hidden">
-          <div style="margin-bottom: 1.5rem;">
-            <div class="badge badge-rec" style="margin-bottom: 6px;"><i class="fa-solid fa-eye-slash"></i> Practical Local Knowledge</div>
-            <h2 style="font-size: 1.4rem; margin-bottom: 6px;">Things Nobody Tells You (Hidden Frictions)</h2>
-            <p style="color: var(--text-secondary); font-size: 0.95rem;">
-              Practical realities travelers typically discover only after landing.
+          <div class="tab-panel-intro">
+            <div class="section-intro-badge"><i class="fa-solid fa-eye-slash"></i> Practical Local Reality</div>
+            <h2 class="section-intro-title">Things Nobody Tells You (Hidden Frictions)</h2>
+            <p class="section-intro-desc">
+              Hyper-practical realities that standard guidebooks skip, but every real traveler discovers upon landing.
             </p>
           </div>
 
@@ -390,10 +599,11 @@
 
         <!-- TAB 4: DESTINATION APP STACK -->
         <div class="tab-panel" id="tab-apps">
-          <div style="margin-bottom: 1.5rem;">
-            <h2 style="font-size: 1.4rem; margin-bottom: 6px;">📱 Destination App Intelligence</h2>
-            <p style="color: var(--text-secondary); font-size: 0.95rem;">
-              Essential apps to install prior to boarding, including regional limitations and verification warnings.
+          <div class="tab-panel-intro">
+            <div class="section-intro-badge"><i class="fa-solid fa-mobile-screen-button"></i> Boarding Survival App Stack</div>
+            <h2 class="section-intro-title">Destination App Intelligence</h2>
+            <p class="section-intro-desc">
+              Install and register these apps before leaving home. Includes SMS verification and foreign card limitations.
             </p>
           </div>
 
@@ -402,35 +612,53 @@
 
         <!-- TAB 5: PACKING & "DO I NEED THIS?" -->
         <div class="tab-panel" id="tab-packing">
-          <div class="do-i-need-box">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-              <div class="logo-icon" style="width: 36px; height: 36px; font-size: 1.1rem;">
-                <i class="fa-solid fa-microchip"></i>
+          <div class="do-i-need-box modern-evaluator-card">
+            <div class="evaluator-header-row">
+              <div class="evaluator-avatar-badge">
+                <img src="assets/mascot-logo.jpg" alt="Travu Inspector" class="evaluator-mascot-icon">
               </div>
-              <h3 style="font-size: 1.25rem;">AI Item Evaluator: "Do I Need This?"</h3>
+              <div>
+                <h3 class="evaluator-title">AI Packing Inspector: "Do I Need This?"</h3>
+                <p class="evaluator-sub">
+                  Unsure whether to pack a specific item to <strong id="eval-country-name">your destination</strong>? Ask Travu for instant contextual advice!
+                </p>
+              </div>
             </div>
-            <p style="color: var(--text-secondary); font-size: 0.92rem;">
-              Unsure if you should pack a specific item to <span id="eval-country-name">your destination</span>? Type any item (e.g. <em>"Portable Bidet", "Universal Adapter", "Cold Medicine", "Cash", "Power Bank", "Winter Jacket"</em>) for instant AI guidance!
-            </p>
 
             <div class="evaluator-input-wrap">
-              <input type="text" class="evaluator-input" id="item-eval-input" placeholder="Type any item name to evaluate..." onkeydown="if(event.key==='Enter') evaluateUserItem()">
-              <button class="btn-primary" onclick="evaluateUserItem()">
-                <i class="fa-solid fa-magnifying-glass"></i> Evaluate Item
+              <div class="evaluator-input-inner">
+                <i class="fa-solid fa-magnifying-glass evaluator-search-icon"></i>
+                <input type="text" class="evaluator-input" id="item-eval-input" placeholder="e.g. Portable Bidet, Power Bank 20000mAh, Universal Plug Adapter, Winter Coat..." onkeydown="if(event.key==='Enter') evaluateUserItem()">
+              </div>
+              <button class="btn-evaluator-run" onclick="evaluateUserItem()">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Evaluate
               </button>
             </div>
 
+            <!-- Suggested Items to test -->
+            <div class="evaluator-quick-tags">
+              <span class="quick-tag-label">Try asking about:</span>
+              <button class="quick-eval-tag" onclick="quickEvaluateItem('Portable Bidet')">🚰 Portable Bidet</button>
+              <button class="quick-eval-tag" onclick="quickEvaluateItem('Universal Plug Adapter')">🔌 Universal Adapter</button>
+              <button class="quick-eval-tag" onclick="quickEvaluateItem('Cold Medicine with Pseudoephedrine')">💊 Cold Medicine</button>
+              <button class="quick-eval-tag" onclick="quickEvaluateItem('Physical Cash')">💵 Physical Cash</button>
+              <button class="quick-eval-tag" onclick="quickEvaluateItem('eSIM vs Pocket WiFi')">📶 eSIM</button>
+            </div>
+
             <div class="evaluator-result-card" id="evaluator-result-card">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
-                <strong id="eval-result-title" style="font-size: 1.05rem; color: var(--text-primary);">Evaluation Result</strong>
+              <div class="eval-result-header">
+                <strong id="eval-result-title">Evaluation Result</strong>
                 <span class="badge badge-rec" id="eval-result-verdict">🟡 Recommended</span>
               </div>
-              <p id="eval-result-explanation" style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.5;"></p>
+              <p id="eval-result-explanation"></p>
             </div>
           </div>
 
-          <div style="margin-top: 2rem;">
-            <h3 style="font-size: 1.2rem; margin-bottom: 1rem;"><i class="fa-solid fa-suitcase-rolling"></i> Smart Packing Breakdown (Weather & Profile Adaptive)</h3>
+          <div style="margin-top: 2.5rem;">
+            <div class="section-sub-header">
+              <i class="fa-solid fa-suitcase-rolling"></i>
+              <h3>Adaptive Packing Breakdown (Weather & Profile Adaptive)</h3>
+            </div>
             <div class="cards-grid-3" id="packing-matrix-container"></div>
           </div>
         </div>
@@ -438,38 +666,55 @@
         <!-- TAB 6: CULTURE SHOCK SIMULATOR + CUSTOM PROMPT SCENARIO CREATOR -->
         <div class="tab-panel" id="tab-simulator">
           <div class="simulator-container">
+            
             <!-- Custom AI Scenario Generator Prompt Box -->
-            <div style="background: var(--bg-tertiary); border: 1px solid var(--border-highlight); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 2rem;">
-              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-                <span class="badge badge-info"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Scenario Creator</span>
-                <strong style="font-size: 1rem; color: var(--text-primary);">Create Your Own Scenario with Prompt</strong>
+            <div class="custom-scenario-card">
+              <div class="custom-scenario-header">
+                <div class="scenario-sparkle-icon">
+                  <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <div>
+                  <h3 class="custom-scenario-title">AI Scenario Creator: Test Any Custom Situation</h3>
+                  <p class="custom-scenario-subtitle">
+                    Want to test a unique scenario? Type any situation (e.g. <em>"Arriving late at train station with no local cash", "Lost passport in night market", "Meeting client in traditional tea house"</em>) and Travu AI will build an interactive quiz!
+                  </p>
+                </div>
               </div>
-              <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1rem;">
-                Have a specific situation in mind? Type any scenario prompt (e.g. <em>"Arriving late at train station with no local cash", "Lost passport in night market", "Dining with local business partners"</em>) and AI will construct an interactive simulation!
-              </p>
-              <div style="display: flex; gap: 10px;">
-                <input type="text" class="config-input" id="custom-scenario-prompt" placeholder="Type any scenario prompt here..." onkeydown="if(event.key==='Enter') createCustomAiScenario()">
-                <button class="btn-primary" onclick="createCustomAiScenario()" id="btn-create-scenario">
-                  <i class="fa-solid fa-sparkles"></i> Generate Scenario
+              
+              <div class="custom-scenario-input-row">
+                <input type="text" class="modern-input" id="custom-scenario-prompt" placeholder="Type your custom scenario prompt here..." onkeydown="if(event.key==='Enter') createCustomAiScenario()">
+                <button class="btn-primary" onclick="createCustomAiScenario()" id="btn-create-scenario" style="flex-shrink: 0;">
+                  <i class="fa-solid fa-sparkles"></i> Build Scenario
                 </button>
               </div>
             </div>
 
-            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+            <!-- Scenario Selection Header -->
+            <div class="simulator-header-row">
               <div>
                 <div class="badge badge-info" style="margin-bottom: 6px;"><i class="fa-solid fa-brain"></i> Interactive AI Training</div>
                 <h2 style="font-size: 1.4rem;">🎭 Culture Shock Simulator</h2>
                 <p style="color: var(--text-secondary); font-size: 0.92rem;">
-                  Select a scenario below or test your custom prompts:
+                  Choose a real-world scenario below to test your survival instincts:
                 </p>
               </div>
-              <div style="display: flex; gap: 8px; flex-wrap: wrap;" id="sim-scenario-pills"></div>
+              <div class="sim-pills-row" id="sim-scenario-pills"></div>
             </div>
 
-            <div class="sim-scenario-box" id="scenario-active-box">
-              <h3 id="sim-scenario-title" style="font-size: 1.15rem; margin-bottom: 8px; color: var(--accent-cyan);">Scenario</h3>
-              <p id="sim-scenario-text" style="font-size: 0.98rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.5;"></p>
-              <strong id="sim-question-text" style="display: block; font-size: 0.92rem; color: var(--status-rec); margin-bottom: 0.75rem;">Question</strong>
+            <!-- Active Scenario Interactive Box -->
+            <div class="sim-scenario-box modern-quiz-card" id="scenario-active-box">
+              <div class="quiz-badge-row">
+                <span class="quiz-badge"><i class="fa-solid fa-lightbulb"></i> Interactive Situation</span>
+                <span class="quiz-mascot-tag"><img src="assets/mascot-logo.jpg" alt="Travu"> Travu Simulator</span>
+              </div>
+              
+              <h3 id="sim-scenario-title" class="quiz-scenario-title">Scenario Title</h3>
+              <p id="sim-scenario-text" class="quiz-scenario-desc"></p>
+              
+              <div class="quiz-question-box">
+                <i class="fa-solid fa-circle-question"></i>
+                <strong id="sim-question-text">What is the most respectful and correct action to take?</strong>
+              </div>
 
               <div class="sim-options-list" id="sim-options-container"></div>
 
@@ -480,73 +725,89 @@
             </div>
           </div>
         </div>
+
       </div>
 
       <!-- VIEW 2: LIVE ARRIVAL MODE VIEW -->
       <div id="view-arrival-mode" style="display: none;">
-        <div style="margin-bottom: 1.5rem;">
-          <div class="badge badge-info" style="margin-bottom: 6px;"><i class="fa-solid fa-location-crosshairs"></i> Landed at Destination</div>
-          <h2 style="font-size: 1.4rem; margin-bottom: 6px;">🛬 Arrival Assistant: The First 2 Hours</h2>
-          <p style="color: var(--text-secondary); font-size: 0.95rem;">
-            Upon landing, your focus transitions from <strong>Prepare</strong> to <strong>Navigate</strong>. Follow this runway to accommodation timeline:
+        <div class="tab-panel-intro">
+          <div class="section-intro-badge"><i class="fa-solid fa-location-crosshairs"></i> Landed at Destination</div>
+          <h2 class="section-intro-title">🛬 Arrival Assistant: The First 2 Hours</h2>
+          <p class="section-intro-desc">
+            Upon touchdown, your focus switches from <strong>Preparation</strong> to <strong>Navigation</strong>. Follow this step-by-step runway-to-hotel timeline:
           </p>
         </div>
 
-        <div class="arrival-timeline" id="arrival-timeline-container"></div>
+        <div class="arrival-timeline-modern" id="arrival-timeline-container"></div>
 
-        <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem; margin-top: 2rem;">
-          <h3 style="font-size: 1.1rem; color: var(--status-must); margin-bottom: 1rem;">
-            <i class="fa-solid fa-phone-volume"></i> Verified Local & Consular Emergency Contacts
-          </h3>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;" id="emergency-contacts-grid"></div>
+        <div class="emergency-contacts-card">
+          <div class="emergency-header">
+            <div class="emergency-icon-wrap">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div>
+              <h3 class="emergency-title">Verified Local & Consular Emergency Runway</h3>
+              <p class="emergency-sub">Keep these saved offline in your phone contacts.</p>
+            </div>
+          </div>
+          <div class="emergency-grid" id="emergency-contacts-grid"></div>
         </div>
       </div>
 
     </section>
   </main>
 
-  <!-- Floating AI Copilot Widget Button -->
+  <!-- Floating AI Copilot Widget Button with Mascot Avatar -->
   <div class="ai-copilot-widget">
-    <button class="copilot-trigger-btn" onclick="toggleCopilotChat()">
-      <i class="fa-solid fa-robot"></i>
-      <span>Travu AI Copilot</span>
+    <button class="copilot-trigger-btn" onclick="toggleCopilotChat()" title="Chat with Travu AI Copilot">
+      <div class="copilot-btn-avatar">
+        <img src="assets/mascot-logo.jpg" alt="Travu Copilot">
+        <span class="copilot-btn-dot"></span>
+      </div>
+      <span class="copilot-btn-label">Ask Travu Copilot</span>
     </button>
   </div>
 
   <!-- AI Copilot Chat Drawer Overlay -->
   <div class="chat-modal-overlay" id="copilot-modal">
-    <div class="chat-modal-box">
+    <div class="chat-modal-box modern-glass-modal">
       <div class="chat-header">
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <div class="logo-icon" style="width: 34px; height: 34px; font-size: 1rem;">
-            <i class="fa-solid fa-compass"></i>
+        <div class="chat-header-user">
+          <div class="mascot-chat-avatar">
+            <img src="assets/mascot-logo.jpg" alt="Travu">
+            <span class="chat-status-dot"></span>
           </div>
           <div>
-            <h4 style="font-size: 0.95rem;">Travu AI Copilot</h4>
-            <span style="font-size: 0.72rem; color: var(--status-opt);"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> Active • Ready to Assist</span>
+            <h4 class="chat-header-title">Travu AI Copilot</h4>
+            <span class="chat-header-status">Live Assistant • Ready to Answer</span>
           </div>
         </div>
-        <button class="btn-icon" style="width: 32px; height: 32px;" onclick="toggleCopilotChat()">
+        <button class="btn-icon chat-close-btn" onclick="toggleCopilotChat()">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
 
       <div class="chat-messages" id="chat-messages-body">
         <div class="chat-msg bot">
-          👋 Hello traveler! I am your <strong>Travu AI Travel Readiness Copilot</strong>. Ask me anything practical regarding transit passes, local wall plugs, tipping, water safety, or navigation rules!
+          <div class="msg-avatar">
+            <img src="assets/mascot-logo.jpg" alt="Travu">
+          </div>
+          <div class="msg-bubble">
+            👋 Hello traveler! I am <strong>Travu</strong>, your AI Travel Readiness Copilot. Ask me anything about subway cards, local power plugs, bidet etiquette, tipping, water safety, or navigation apps!
+          </div>
         </div>
       </div>
 
       <div class="chat-suggestions">
         <span class="suggestion-chip" onclick="sendQuickPrompt('Is tap water safe to drink at my destination?')">🚰 Tap Water Safety</span>
         <span class="suggestion-chip" onclick="sendQuickPrompt('What are the tipping rules in restaurants?')">💵 Tipping Rules</span>
-        <span class="suggestion-chip" onclick="sendQuickPrompt('Can I use my foreign debit card on city buses?')">💳 Transit Cards</span>
-        <span class="suggestion-chip" onclick="sendQuickPrompt('What wall plug adapter do I need?')">🔌 Power Plug Type</span>
+        <span class="suggestion-chip" onclick="sendQuickPrompt('Can I use my foreign credit card on buses?')">💳 Transit Cards</span>
+        <span class="suggestion-chip" onclick="sendQuickPrompt('What wall plug adapter do I need?')">🔌 Plug Type</span>
       </div>
 
       <div class="chat-input-row">
-        <input type="text" class="chat-input-field" id="chat-user-input" placeholder="Ask a practical travel question..." onkeydown="if(event.key==='Enter') sendChatMessage()">
-        <button class="btn-primary" style="padding: 8px 16px;" onclick="sendChatMessage()">
+        <input type="text" class="chat-input-field" id="chat-user-input" placeholder="Ask a practical survival question..." onkeydown="if(event.key==='Enter') sendChatMessage()">
+        <button class="btn-send-msg" onclick="sendChatMessage()">
           <i class="fa-solid fa-paper-plane"></i>
         </button>
       </div>
@@ -555,47 +816,52 @@
 
   <!-- Google Gemini API Key Settings Modal -->
   <div class="standard-modal-overlay" id="api-key-modal">
-    <div class="modal-content-card">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem;">
-        <div>
-          <span class="badge badge-info" style="margin-bottom: 6px;">AI Model Configuration</span>
+    <div class="modal-content-card modern-glass-card">
+      <div class="modal-card-header">
+        <div class="modal-header-text">
+          <span class="badge badge-info" style="margin-bottom: 6px;"><i class="fa-solid fa-microchip"></i> AI Engine Settings</span>
           <h2 style="font-size: 1.4rem;">Connect Google Gemini API</h2>
         </div>
         <button class="btn-icon" onclick="closeModal('api-key-modal')"><i class="fa-solid fa-xmark"></i></button>
       </div>
 
-      <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.25rem;">
+      <p class="modal-card-desc">
         Travu uses the <strong>Google Gemini API</strong> to generate 100% live travel readiness plans. Enter your Gemini API key below:
       </p>
 
-      <div style="background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.25rem;">
+      <div class="modal-setting-box">
         <label class="config-label" style="margin-bottom: 8px;">
           <span class="label-left"><i class="fa-solid fa-key"></i> Google Gemini API Key</span>
         </label>
-        <input type="password" class="config-input" id="input-custom-gemini-key" placeholder="AIzaSy..." style="font-family: var(--font-mono); margin-bottom: 8px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted);">
-          <span>Get your key from <a href="https://aistudio.google.com/" target="_blank" style="color: var(--accent-cyan); font-weight: 700;">Google AI Studio</a></span>
-          <button style="background: transparent; border: none; color: var(--accent-cyan); cursor: pointer; font-weight: 600;" onclick="toggleApiKeyVisibility()">Show/Hide</button>
+        <div class="input-wrapper">
+          <input type="password" class="modern-input" id="input-custom-gemini-key" placeholder="AIzaSy..." style="font-family: var(--font-mono);">
+        </div>
+        <div class="modal-key-help">
+          <span>Get your free key from <a href="https://aistudio.google.com/" target="_blank" class="link-cyan">Google AI Studio</a></span>
+          <button class="btn-text-action" onclick="toggleApiKeyVisibility()">Show/Hide</button>
         </div>
       </div>
 
-      <div style="background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.5rem;">
+      <div class="modal-setting-box">
         <label class="config-label" style="margin-bottom: 6px;">
-          <span class="label-left"><i class="fa-solid fa-robot"></i> Gemini Model Preference</span>
+          <span class="label-left"><i class="fa-solid fa-brain"></i> Gemini Model Preference</span>
         </label>
-        <select class="config-select" id="select-gemini-model" onchange="handleModelSelectChange(this.value)">
-          <option value="gemini-2.5-flash">Gemini 2.5 Flash (Latest & Ultra-fast)</option>
-          <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
-          <option value="gemini-1.5-flash-latest" selected>Gemini 1.5 Flash (Recommended)</option>
-          <option value="gemini-1.5-pro-latest">Gemini 1.5 Pro (Deep Analysis)</option>
-          <option value="custom">✏️ Enter Custom Model Name...</option>
-        </select>
-        <input type="text" class="config-input" id="input-custom-model-name" placeholder="e.g. gemini-2.5-flash, gemini-2.0-flash" style="margin-top: 8px; display: none;">
+        <div class="select-wrapper">
+          <select class="modern-select" id="select-gemini-model" onchange="handleModelSelectChange(this.value)">
+            <option value="gemini-2.5-flash">Gemini 2.5 Flash (Ultra-fast & Recommended)</option>
+            <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
+            <option value="gemini-1.5-flash-latest" selected>Gemini 1.5 Flash</option>
+            <option value="gemini-1.5-pro-latest">Gemini 1.5 Pro (Deep Analysis)</option>
+            <option value="custom">✏️ Enter Custom Model Name...</option>
+          </select>
+          <i class="fa-solid fa-chevron-down select-arrow"></i>
+        </div>
+        <input type="text" class="modern-input" id="input-custom-model-name" placeholder="e.g. gemini-2.5-flash, gemini-2.0-flash" style="margin-top: 8px; display: none;">
       </div>
 
-      <div id="api-status-feedback" style="margin-bottom: 1.25rem; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;"></div>
+      <div id="api-status-feedback" class="modal-status-feedback"></div>
 
-      <div style="display: flex; gap: 10px;">
+      <div class="modal-action-row">
         <button class="btn-primary" style="flex: 1; justify-content: center;" onclick="saveApiKeySettings()">
           <i class="fa-solid fa-floppy-disk"></i> Save Key & Connect
         </button>
@@ -606,20 +872,26 @@
     </div>
   </div>
 
-  <!-- Clean Footer -->
+  <!-- Modern Site Footer -->
   <footer class="site-footer">
     <div class="footer-container">
-      <div class="footer-brand">
-        <div class="logo-icon" style="width: 32px; height: 32px; font-size: 0.95rem;">
-          <i class="fa-solid fa-compass"></i>
+      <div class="footer-brand-row">
+        <div class="footer-brand-group">
+          <img src="assets/mascot-logo.jpg" alt="Travu Mascot" class="footer-mascot-img">
+          <div>
+            <span class="footer-brand-name">Travu</span>
+            <span class="footer-brand-sub">AI Travel Readiness Copilot</span>
+          </div>
         </div>
-        <span>Travu</span>
+        <p class="footer-tagline">
+          Know what to bring. Know what to expect. Know what to do.
+        </p>
       </div>
-      <p style="color: var(--text-secondary); font-size: 0.88rem;">
-        AI Travel Readiness Copilot • Know what to bring. Know what to expect. Know what to do.
-      </p>
-      <div style="font-size: 0.82rem; color: var(--text-muted);">
-        © 2026 Travu. All rights reserved.
+      <div class="footer-bottom-row">
+        <span>© 2026 Travu. Powered by Google Gemini AI.</span>
+        <div class="footer-links">
+          <span>Global Readiness Intelligence</span>
+        </div>
       </div>
     </div>
   </footer>

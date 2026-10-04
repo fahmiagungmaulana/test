@@ -669,6 +669,30 @@ function evaluateUserItem() {
   }
 }
 
+function quickEvaluateItem(itemName) {
+  const inputEl = document.getElementById("item-eval-input");
+  if (inputEl) {
+    inputEl.value = itemName;
+    evaluateUserItem();
+  }
+}
+
+function insertPromptTemplate(templateType) {
+  switchGeneratorInputMode("prompt");
+  const promptInput = document.getElementById("cfg-freeform-prompt");
+  if (!promptInput) return;
+
+  const templates = {
+    "korea-student": "I am an Indonesian student traveling to South Korea for 6 months on a university exchange program at Yonsei University in Seoul. I need to know essential local banking apps, alien registration card (ARC) rules, trash sorting regulations, cold winter clothing survival tips, and halal food navigation.",
+    "japan-photography": "I am a solo photographer from the US doing a 14-day autumn tour across Tokyo, Kyoto, and rural Takayama. I want to know subway etiquette with camera gear, coin locker systems, power adapter standards, cash vs IC card requirements, and photography etiquette in temples.",
+    "singapore-family": "We are a family of 4 from Indonesia (parents and 2 kids under 6) traveling to Singapore for a 4-day weekend trip. We need stroller accessibility tips on the MRT, local taxi vs Grab car seat rules, tap water safety, chewing gum customs, and family friendly payment methods.",
+    "swiss-winter": "I am an independent traveler from Australia visiting Switzerland for 10 days in January. Visiting Zurich, Interlaken, and Zermatt. I need to know Swiss Travel Pass validity, mountain train reservations, winter gear packing necessities, tipping etiquette in chalets, and supermarket discount hours."
+  };
+
+  promptInput.value = templates[templateType] || "";
+  promptInput.focus();
+}
+
 // 7. Culture Simulator & Custom Prompt Generator
 function renderScenarioPills(dest) {
   const container = document.getElementById("sim-scenario-pills");
